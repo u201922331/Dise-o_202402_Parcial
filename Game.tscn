@@ -1,0 +1,56 @@
+[gd_scene load_steps=5 format=3 uid="uid://bva35ppam0fcs"]
+
+[ext_resource type="PackedScene" uid="uid://cojkcd0u2wf7f" path="res://Player.tscn" id="1_7evga"]
+[ext_resource type="Script" path="res://assets/scripts/game.gd" id="1_pherk"]
+[ext_resource type="PackedScene" uid="uid://dgbb176pa2yfh" path="res://Crate.tscn" id="3_c6b8s"]
+[ext_resource type="PackedScene" uid="uid://bx48yqtsqx3lk" path="res://Lava.tscn" id="4_yen7f"]
+
+[node name="Game" type="Node2D"]
+position = Vector2(359, 219)
+script = ExtResource("1_pherk")
+
+[node name="Players" type="Node" parent="."]
+
+[node name="Player 1" parent="Players" instance=ExtResource("1_7evga")]
+position = Vector2(130, 284)
+
+[node name="Player 2" parent="Players" instance=ExtResource("1_7evga")]
+position = Vector2(477, 263)
+PLAYER_ID = 1
+
+[node name="Player 3" parent="Players" instance=ExtResource("1_7evga")]
+position = Vector2(720, 195)
+PLAYER_ID = 2
+
+[node name="Crates" type="Node2D" parent="."]
+
+[node name="Crate" parent="Crates" instance=ExtResource("3_c6b8s")]
+position = Vector2(-238, 119)
+
+[node name="Crate2" parent="Crates" instance=ExtResource("3_c6b8s")]
+position = Vector2(-60, 149)
+
+[node name="Crate3" parent="Crates" instance=ExtResource("3_c6b8s")]
+position = Vector2(116, 94)
+
+[node name="Crate4" parent="Crates" instance=ExtResource("3_c6b8s")]
+position = Vector2(310, 275)
+
+[node name="Crate6" parent="Crates" instance=ExtResource("3_c6b8s")]
+position = Vector2(444, 205)
+
+[node name="Crate9" parent="Crates" instance=ExtResource("3_c6b8s")]
+position = Vector2(596, 129)
+
+[node name="Crate5" parent="Crates" instance=ExtResource("3_c6b8s")]
+position = Vector2(361, 25)
+
+[node name="Crate7" parent="Crates" instance=ExtResource("3_c6b8s")]
+position = Vector2(540, -51)
+
+[node name="Crate8" parent="Crates" instance=ExtResource("3_c6b8s")]
+position = Vector2(175, 327)
+
+[node name="Lava" parent="." instance=ExtResource("4_yen7f")]
+position = Vector2(220, 405)
+scale = Vector2(47.665, 5.085)
